@@ -7,11 +7,14 @@ cycles, requiring very little CPU bandwidth.  Can be used for simple PWM project
 
 Because it is software PWM, timing depends on Linux system.  While it is likely
 to become unreliable for applications requiring very precise timing, it works
-quite well for things like LED intensity controls and servo motor applications.
+quite well for things like LED intensity controls and servo motor applications.  
+It is possible that timing accuracy may suffer when the CPU is heavily loaded.  
+However, I've used it successfully in numerous servo applications (most of which 
+involve steering camera mounts).
 
-Because it is software PWM, it is possible that timing accuracy may suffer when
-the CPU is heavily loaded.  However, I've used it successfully in numerous 
-servo applications (most of which involve steering camera mounts).
+If your project requires very fine precision (anything shy of 50us, give or take)
+or has safety concerns of any sort regarding its operation, this utility should 
+not be used.  Don't try to fly a quad-copter with it.  
 
 Note that the utility simply sends a pulse train and then exits, so may not be
 suitable for applications for which a constant on-station signal needs to be
