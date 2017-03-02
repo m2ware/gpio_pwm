@@ -28,7 +28,7 @@ Usage:
     pin is the GPIO pin number
     pulseDuration is specified in microseconds (T_cycle)
     repCount is a positive integer
-    dutyCycle is an integer percentage from 0 to 100 (controls pulse width)
+    dutyCycle is an floating-point percentage from 0 to 100 (controls pulse width)
 
 Example:
 
